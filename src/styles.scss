@@ -1,1 +1,269 @@
-/* You can add global styles to this file, and also import other style files */
+/* root */
+
+:root {
+    --headerHeight: 80px;
+    --navHeight: 56px;
+    --footerHeight: 100px;
+
+    --fontText: 'Roboto', sans-serif;
+    --fontHeading: 'Fira Sans', sans-serif;
+
+    --containerPadding: 1em 0;
+    --containerMargin: 0.5em;
+    --containerWidth: 90%;
+
+    --sectionPadding: 2em 0;
+
+    --mainColor: #3279A6;
+    --mainColorLight: #66CDD9;
+    --mainColorDark: #03588C;
+    --mainColorTransparency: #03588CE5;
+
+    --whiteColor: #fff;
+}
+
+/* global */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: middle;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--fontText);
+    font-weight: 200;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--fontHeading);
+    margin-bottom: var(--containerMargin);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+label {
+	display: inline-block;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+.main {
+    background-color: whitesmoke;
+    min-height: calc(100vh - (var(--headerHeight) + var(--footerHeight) + var(--navHeight)));
+
+    &__container {
+        width: var(--containerWidth);
+        margin: 0 auto;
+    }
+
+    section {
+        padding: var(--sectionPadding);
+
+        .column {
+
+            &__p {
+                font-weight: 300;
+                margin-bottom: 1em;
+            }
+     
+            &__a {
+                color: var(--mainColorDark);
+            }
+        }
+    }
+}
+
+/* Estilo de los campos del formulario */
+
+.form {
+    &-control {
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        &:not(:disabled):not(.disabled):focus:not(:focus-visible) {
+            border-color: #ced4da;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
+        }
+
+        &:disabled, [readonly] {
+            background-color: #e9ecef;
+            opacity: 1;
+        }
+    }
+
+    &-label {
+        margin-bottom: 0.5rem;
+    }
+
+    &-select {
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        margin-top: 5px;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+}
+
+.btn-primary {
+	width: 100%;
+    display: block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    user-select: none;
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background-color: var(--mainColorDark);
+        border-color: var(--mainColorDark);
+    }
+}
+
+/* Grid */
+
+.container {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2em;
+        grid-auto-flow: row;
+    }
+}
+
+article {
+	background-color: var(--mainColor);
+	padding: 2%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: -15px;
+    margin-left: -15px;
+
+    &__column {
+        padding: 0 1em;
+    }
+}
+
+/* Una columna por fila para pantallas de hasta 768px */
+@media screen and (max-width: 768px) {
+    
+    .container__grid {
+		grid-template-columns: 1fr;
+	}
+	
+	.row__column {
+    	flex: 0 0 100%;
+    	max-width: 100%;
+    	margin-bottom: 1em;
+	}
+}
+
+/* Dos columnas por fila para pantallas de 769px a 1080px */
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+	
+    .container__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	
+	.row__column {
+    	flex: 0 0 50%;
+    	max-width: 50%;
+    	margin-bottom: 1em;
+	}
+}
+
+/* Tres columnas por fila para pantallas de 1081px a 1280px */
+@media screen and (min-width: 1081px) and (max-width: 1280px) {
+	.container__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	.row__column {
+    	flex: 0 0 25%;
+    	max-width: 25%;
+	}
+}
+
+/* Cuatro columnas por fila para pantallas mayores de 1281px */
+@media screen and (min-width: 1281px) {
+	.container__grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	
+	.row__column {
+    	flex: 0 0 25%;
+    	max-width: 25%;
+	}
+}

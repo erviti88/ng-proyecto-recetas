@@ -1,0 +1,18 @@
+/* footer.component */
+
+.footer {
+    height: var(--footerHeight);
+    background-color: var(--mainColor);
+
+    &__container {
+        width: var(--containerWidth);
+        margin: 0 auto;
+        padding: var(--containerPadding);
+    }
+
+    &__p {
+        color: var(--mainColorLight);
+    }
+}
+
+/* footer.component */
