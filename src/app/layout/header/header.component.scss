@@ -1,29 +1,28 @@
 /* header */
 
 .header {
-    height: var(--headerHeight);
-    background-color: var(--mainColor);
+    height: var(--header-height);
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column-reverse;
 
     &__container {
-        width: var(--containerWidth);
+        width: var(--container-width);
         margin: 0 auto;
-        padding: var(--containerPadding);
+        padding: var(--container-padding);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
 
         .user-nav {
-            
             &__ul {
                 display: flex;
                 gap: 2em;
             }
         
             &__a {
-                color: var(--whiteColor);
+                color: var(--white-color);
                 font-weight: bolder;
             }
         }
@@ -40,12 +39,11 @@
     }
 
     &__h1 {
-        color: var(--whiteColor);
+        color: var(--white-color);
         margin: 0;
     }
 
     .social-icons {
-
         &__ul {
             display: flex;
             gap: 1em;
@@ -53,14 +51,14 @@
 
         &__a {
             font-size: 1.5em;
-            color: var(--whiteColor);
+            color: var(--white-color);
         }
 
         &__i {
-            color: var(--mainColorLight);
+            color: var(--main-color-light);
 
             &:hover {
-                color: var(--whiteColor);
+                color: var(--white-color);
             }
         }
     }

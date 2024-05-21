@@ -1,0 +1,41 @@
+/* insertar.component */
+
+/* table */
+
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid var(--main-color);
+}
+
+.table thead {
+	background-color: var(--main-color);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    text-align: left;
+    color: var(--white-color);
+}
+
+.table tbody th {
+    text-align: left;
+}
+
+.table tbody td a {
+    color: var(--main-color-dark);
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+/* insertar.component */

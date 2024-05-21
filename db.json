@@ -1,0 +1,58 @@
+{
+  "recetas": [
+    {
+      "id": "1709434723495",
+      "nombre": "Sopa de Tomate",
+      "calorias": 300,
+      "imagen": "assets/img/receta_001.webp",
+      "dificultad": {
+        "dificultad": "Intermedio"
+      }
+    },
+    {
+      "id": "1709434755389",
+      "nombre": "Paella de Mariscos",
+      "calorias": 600,
+      "imagen": "assets/img/receta_002.webp",
+      "dificultad": {
+        "dificultad": "Intermedio"
+      }
+    },
+    {
+      "id": "1709434784703",
+      "nombre": "Tarta de Chocolate",
+      "calorias": 400,
+      "imagen": "assets/img/receta_003.webp",
+      "dificultad": {
+        "dificultad": "Difícil"
+      }
+    },
+    {
+      "id": "1709434799621",
+      "nombre": "Ensalada César",
+      "calorias": 150,
+      "imagen": "assets/img/receta_004.webp",
+      "dificultad": {
+        "dificultad": "Fácil"
+      }
+    },
+    {
+      "id": "1709434816027",
+      "nombre": "Risotto de Champiñones",
+      "calorias": 450,
+      "imagen": "assets/img/receta_005.webp",
+      "dificultad": {
+        "dificultad": "Intermedio"
+      }
+    },
+    {
+      "id": "1709434837077",
+      "nombre": "Tarta de Zanahoria",
+      "calorias": 630,
+      "imagen": "assets/img/receta_006.webp",
+      "dificultad": {
+        "dificultad": "Fácil"
+      }
+    }
+  ]
+}

@@ -1,25 +1,24 @@
 /* navbar.component */
 
 .nav {
-    height: var(--navHeight);
-    background-color: var(--mainColorDark);
+    height: var(--nav-height);
+    background-color: var(--main-color-dark);
 
     &__container {
-        width: var(--containerWidth);
+        width: var(--container-width);
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        padding: var(--containerPadding);
+        padding: var(--container-padding);
 
         .main-nav, .user-nav {
-
             &__ul {
                 display: flex;
                 gap: 2em;
             }
         
             &__a {
-                color: var(--whiteColor);
+                color: var(--white-color);
                 font-weight: bolder;
             }
         }

@@ -1,17 +1,17 @@
 /* footer.component */
 
 .footer {
-    height: var(--footerHeight);
-    background-color: var(--mainColor);
+    height: var(--footer-height);
+    background-color: var(--main-color);
 
     &__container {
-        width: var(--containerWidth);
+        width: var(--container-width);
         margin: 0 auto;
-        padding: var(--containerPadding);
+        padding: var(--container-padding);
     }
 
     &__p {
-        color: var(--mainColorLight);
+        color: var(--main-color-light);
     }
 }
 

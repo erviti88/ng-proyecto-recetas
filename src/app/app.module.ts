@@ -10,6 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { MostrarComponent } from './pages/mostrar/mostrar.component';
 import { ErrorComponent } from './pages/error/error.component';
 import { InsertarComponent } from './pages/insertar/insertar.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EditarComponent } from './pages/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { InsertarComponent } from './pages/insertar/insertar.component';
     HomeComponent,
     MostrarComponent,
     ErrorComponent,
-    InsertarComponent
+    InsertarComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

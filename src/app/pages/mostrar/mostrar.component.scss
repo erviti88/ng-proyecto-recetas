@@ -1,0 +1,44 @@
+/* mostrar.component */
+
+.image-container {
+    position: relative;
+
+    img {
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    .overlay {
+        background-color: var(--main-color-transparency);
+        bottom: 0;
+        height: 0;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        transition: .5s ease;
+        width: 100%;
+
+        .text {
+            width: 70%;
+            color: var(--white-color);
+            left: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            white-space: wrap;
+        }
+    }
+
+    &:hover {
+        .overlay {
+            height: 100%;
+        }
+    }
+}
+
+/* mostrar.component */

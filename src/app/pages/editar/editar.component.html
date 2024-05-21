@@ -1,0 +1,48 @@
+<!-- editar.component -->
+
+<!-- main -->
+<main class="main">
+    <div class="main__container">
+        <section class="section">
+            <h2>Edita una receta</h2>
+            <!-- form -->
+            <form (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="row__column">
+                        <div class="form-group">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input [(ngModel)]="receta.nombre" type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="row__column">
+                        <div class="form-group">
+                            <label for="calorias" class="form-label">Calorías/Ración:</label> 
+                            <input [(ngModel)]="receta.calorias" name="calorias" type="number" class="form-control" id="calorias" required min="0">
+                        </div>
+                    </div>
+                    <div class="row__column">
+                        <div class="form-group">
+                            <label for="dificultad" class="form-label">Dificultad:</label>
+                            <select [(ngModel)]="receta.dificultad.dificultad" class="form-select" id="dificultad" name="dificultad" required>
+                                <option *ngFor="let dificultad of listaDificultades, let i = index">{{ dificultad.dificultad }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row__column">
+                         <div class="form-group">
+                            <label for="btn" class="form-label">Acción:</label>
+                            <button type="submit" class="btn btn-primary">Editar</button>
+                        </div>
+                    </div>
+                  </div>
+            </form>
+            <!-- form -->
+        </section>
+        <section class="section">
+            <a routerLink="/insertar"><i class="fa-solid fa-angle-left"></i> Volver</a>
+        </section>
+    </div>
+</main>
+<!-- main -->
+
+<!-- editar.component -->
