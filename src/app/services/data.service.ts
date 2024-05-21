@@ -10,7 +10,7 @@ import { Dificultad } from '../model/dificultad';
 export class DataService {
 
   listaDificultades: Dificultad[] = [];
-  db_url: string = 'http://localhost:4000';
+  db_url: string = 'https://db-json-tau.vercel.app/';
   
   constructor(private http: HttpClient) { }
 
